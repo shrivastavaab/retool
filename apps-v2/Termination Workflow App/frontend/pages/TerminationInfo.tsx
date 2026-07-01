@@ -61,9 +61,9 @@ export default function TerminationInfo() {
 
       {/* VNS Alert */}
       {isVNS && (
-        <Alert className="border-amber-200 bg-amber-50 dark:bg-amber-950/20 dark:border-amber-800">
-          <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
-          <AlertDescription className="text-amber-700 dark:text-amber-400">
+        <Alert className="border-warning/30 bg-warning/10">
+          <AlertTriangle className="h-4 w-4 text-warning" />
+          <AlertDescription className="text-foreground">
             <strong>Never Started:</strong> All dates have been set to the hire date.
             This termination will be submitted directly without additional steps.
           </AlertDescription>
@@ -94,7 +94,7 @@ export default function TerminationInfo() {
                 className={`
                   relative flex flex-col items-center gap-2 rounded-lg border-2 p-4 cursor-pointer transition-all
                   ${formData.termType === option.value
-                    ? "border-emerald-500 bg-emerald-50/50 dark:bg-emerald-950/20 dark:border-emerald-600"
+                    ? "border-primary bg-primary/10"
                     : "border-border hover:border-muted-foreground/30 hover:bg-muted/30"
                   }
                 `}

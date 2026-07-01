@@ -64,9 +64,9 @@ export default function TerminationOptions() {
         </p>
       </div>
 
-      <Alert className="border-blue-200 bg-blue-50 dark:bg-blue-950/20 dark:border-blue-800">
-        <Info className="h-4 w-4 text-blue-600 dark:text-blue-400" />
-        <AlertDescription className="text-blue-700 dark:text-blue-400">
+      <Alert className="border-accent bg-accent/60">
+        <Info className="h-4 w-4 text-primary" />
+        <AlertDescription className="text-muted-foreground">
           Select the processing type that best matches the termination
           scenario. This determines how final pay and benefits are handled.
         </AlertDescription>
@@ -91,7 +91,7 @@ export default function TerminationOptions() {
                   flex items-start gap-3 p-4 rounded-lg border-2 cursor-pointer transition-all
                   ${
                     formData.termProcessingType === option.value
-                      ? "border-emerald-500 bg-emerald-50/50 dark:bg-emerald-950/20 dark:border-emerald-600"
+                      ? "border-primary bg-primary/10"
                       : "border-border hover:border-muted-foreground/30 hover:bg-muted/30"
                   }
                 `}

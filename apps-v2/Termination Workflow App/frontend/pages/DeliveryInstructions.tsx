@@ -49,9 +49,9 @@ export default function DeliveryInstructions() {
 
       {/* Payment method warning */}
       {showInvoluntaryPaymentWarning && (
-        <Alert className="border-amber-200 bg-amber-50 dark:bg-amber-950/20 dark:border-amber-800">
-          <Info className="h-4 w-4 text-amber-600 dark:text-amber-400" />
-          <AlertDescription className="text-amber-700 dark:text-amber-400">
+        <Alert className="border-warning/30 bg-warning/10">
+          <Info className="h-4 w-4 text-warning" />
+          <AlertDescription className="text-foreground">
             <strong>{stateLaw?.stateProvincDesc} Law:</strong> For involuntary
             terminations, check payment is required in this state.
           </AlertDescription>
@@ -87,7 +87,7 @@ export default function DeliveryInstructions() {
                   className={`
                     flex items-start gap-3 p-3 rounded-lg border cursor-pointer transition-all
                     ${formData.paymentMethod === opt.value
-                      ? "border-emerald-500 bg-emerald-50/50 dark:bg-emerald-950/20 dark:border-emerald-600"
+                      ? "border-primary bg-primary/10"
                       : "border-border hover:border-muted-foreground/30"
                     }
                   `}

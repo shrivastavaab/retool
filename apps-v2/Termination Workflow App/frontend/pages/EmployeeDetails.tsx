@@ -45,36 +45,36 @@ export default function EmployeeDetails() {
       {/* Eligibility Alerts */}
       <div className="space-y-3">
         {eligBenefits && (
-          <Alert className="border-emerald-200 bg-emerald-50 dark:bg-emerald-950/20 dark:border-emerald-800">
-            <CheckCircle className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
-            <AlertTitle className="text-emerald-800 dark:text-emerald-300">
+          <Alert className="border-success/30 bg-success/10">
+            <CheckCircle className="h-4 w-4 text-success" />
+            <AlertTitle className="text-foreground">
               Benefits Eligible
             </AlertTitle>
-            <AlertDescription className="text-emerald-700 dark:text-emerald-400">
+            <AlertDescription className="text-muted-foreground">
               This employee is eligible for benefits (Full-Time, Regular, 30+ hours).
             </AlertDescription>
           </Alert>
         )}
 
         {needBenDefault && (
-          <Alert className="border-amber-200 bg-amber-50 dark:bg-amber-950/20 dark:border-amber-800">
-            <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
-            <AlertTitle className="text-amber-800 dark:text-amber-300">
+          <Alert className="border-warning/30 bg-warning/10">
+            <AlertTriangle className="h-4 w-4 text-warning" />
+            <AlertTitle className="text-foreground">
               Benefits Default Needed
             </AlertTitle>
-            <AlertDescription className="text-amber-700 dark:text-amber-400">
+            <AlertDescription className="text-muted-foreground">
               This employee requires a benefits default. Health benefit enrollment was not found since hire date.
             </AlertDescription>
           </Alert>
         )}
 
         {isUSEmployee && (
-          <Alert className="border-blue-200 bg-blue-50 dark:bg-blue-950/20 dark:border-blue-800">
-            <Info className="h-4 w-4 text-blue-600 dark:text-blue-400" />
-            <AlertTitle className="text-blue-800 dark:text-blue-300">
+          <Alert className="border-accent bg-accent/60">
+            <Info className="h-4 w-4 text-primary" />
+            <AlertTitle className="text-foreground">
               US Employee
             </AlertTitle>
-            <AlertDescription className="text-blue-700 dark:text-blue-400">
+            <AlertDescription className="text-muted-foreground">
               Final pay due date will be required per state regulations.
             </AlertDescription>
           </Alert>
