@@ -112,7 +112,7 @@ export default function EmployeeSearch() {
             </div>
             <Button
               onClick={handleSearch}
-              className="bg-emerald-600 hover:bg-emerald-700 text-white"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground"
             >
               Search Employee
             </Button>
@@ -158,7 +158,7 @@ export default function EmployeeSearch() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="text-emerald-600 hover:text-emerald-700 hover:bg-emerald-50 dark:text-emerald-400 dark:hover:bg-emerald-950/30"
+                        className="text-primary hover:text-primary hover:bg-primary/10"
                         onClick={() => handleSelectEmployee(emp)}
                       >
                         Select <ArrowRight className="w-3.5 h-3.5 ml-1" />
@@ -219,7 +219,7 @@ export default function EmployeeSearch() {
                   <Button
                     size="sm"
                     variant="ghost"
-                    className="text-emerald-600 hover:text-emerald-700 hover:bg-emerald-50 dark:text-emerald-400 dark:hover:bg-emerald-950/30"
+                    className="text-primary hover:text-primary hover:bg-primary/10"
                     onClick={() => handleSelectPending(pt.empId)}
                   >
                     Select <ArrowRight className="w-3.5 h-3.5 ml-1" />

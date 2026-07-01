@@ -43,7 +43,7 @@ function SectionCard({
           <Button
             size="sm"
             variant="ghost"
-            className="h-7 text-xs text-emerald-600 hover:text-emerald-700 dark:text-emerald-400"
+            className="h-7 text-xs text-primary hover:text-primary"
             onClick={onEdit}
           >
             Edit
@@ -100,8 +100,8 @@ export default function ReviewSubmit() {
   if (submitted) {
     return (
       <div className="flex flex-col items-center justify-center py-16 space-y-4">
-        <div className="w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center">
-          <CheckCircle className="w-8 h-8 text-emerald-600 dark:text-emerald-400" />
+        <div className="w-16 h-16 rounded-full bg-success/10 flex items-center justify-center">
+          <CheckCircle className="w-8 h-8 text-success" />
         </div>
         <h2 className="text-xl font-semibold text-foreground">
           Termination Submitted
@@ -342,7 +342,7 @@ export default function ReviewSubmit() {
           Back
         </Button>
         <Button
-          className="bg-emerald-600 hover:bg-emerald-700 text-white px-8"
+          className="bg-primary hover:bg-primary/90 text-primary-foreground px-8"
           onClick={() => setSubmitted(true)}
           disabled={missingFields.length > 0}
         >

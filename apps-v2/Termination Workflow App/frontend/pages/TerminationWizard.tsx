@@ -149,8 +149,8 @@ export default function TerminationWizard() {
           {/* Logo / Title */}
           <div className="px-5 py-4 border-b border-border">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-emerald-600 dark:bg-emerald-500 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">T</span>
+              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+                <span className="text-primary-foreground font-bold text-sm">T</span>
               </div>
               <div>
                 <h1 className="text-sm font-bold text-foreground leading-tight">
@@ -178,7 +178,7 @@ export default function TerminationWizard() {
               Need help?{" "}
               <Dialog>
                 <DialogTrigger asChild>
-                  <button className="text-emerald-600 dark:text-emerald-400 hover:underline font-medium cursor-pointer">
+                  <button className="text-primary hover:underline font-medium cursor-pointer">
                     Contact HR Support
                   </button>
                 </DialogTrigger>
@@ -193,7 +193,7 @@ export default function TerminationWizard() {
 
                     <div className="space-y-3">
                       <div className="flex items-start gap-3 p-3 rounded-lg bg-muted/50">
-                        <Phone className="w-4 h-4 mt-0.5 text-emerald-600 dark:text-emerald-400" />
+                        <Phone className="w-4 h-4 mt-0.5 text-primary" />
                         <div>
                           <p className="text-sm font-medium text-foreground">Phone</p>
                           <p className="text-sm text-muted-foreground">1-800-638-0461</p>
@@ -202,7 +202,7 @@ export default function TerminationWizard() {
                       </div>
 
                       <div className="flex items-start gap-3 p-3 rounded-lg bg-muted/50">
-                        <Mail className="w-4 h-4 mt-0.5 text-emerald-600 dark:text-emerald-400" />
+                        <Mail className="w-4 h-4 mt-0.5 text-primary" />
                         <div>
                           <p className="text-sm font-medium text-foreground">Email</p>
                           <p className="text-sm text-muted-foreground">hrsupport@trinet.com</p>
@@ -211,7 +211,7 @@ export default function TerminationWizard() {
                       </div>
 
                       <div className="flex items-start gap-3 p-3 rounded-lg bg-muted/50">
-                        <MessageSquare className="w-4 h-4 mt-0.5 text-emerald-600 dark:text-emerald-400" />
+                        <MessageSquare className="w-4 h-4 mt-0.5 text-primary" />
                         <div>
                           <p className="text-sm font-medium text-foreground">Live Chat</p>
                           <p className="text-sm text-muted-foreground">Available on TriNet Platform</p>
@@ -220,7 +220,7 @@ export default function TerminationWizard() {
                       </div>
 
                       <div className="flex items-start gap-3 p-3 rounded-lg bg-muted/50">
-                        <Clock className="w-4 h-4 mt-0.5 text-emerald-600 dark:text-emerald-400" />
+                        <Clock className="w-4 h-4 mt-0.5 text-primary" />
                         <div>
                           <p className="text-sm font-medium text-foreground">Hours of Operation</p>
                           <p className="text-sm text-muted-foreground">Mon–Fri: 6:00 AM – 6:00 PM PT</p>
@@ -307,7 +307,7 @@ export default function TerminationWizard() {
                 {currentStep > 0 && (
                   <Button
                     onClick={goNext}
-                    className="bg-emerald-600 hover:bg-emerald-700 text-white"
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground"
                   >
                     Next
                     <ChevronRight className="w-4 h-4 ml-1" />

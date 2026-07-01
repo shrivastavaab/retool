@@ -1,5 +1,13 @@
+import "./tnetTheme.css";
 import TerminationWizard from "./pages/TerminationWizard";
+import { TNetMuiThemeProvider } from "./utils/tnetMuiTheme";
+
+document.documentElement.classList.add("tnet-theme");
 
 export default function App() {
-  return <TerminationWizard />;
+  return (
+    <TNetMuiThemeProvider>
+      <TerminationWizard />
+    </TNetMuiThemeProvider>
+  );
 }

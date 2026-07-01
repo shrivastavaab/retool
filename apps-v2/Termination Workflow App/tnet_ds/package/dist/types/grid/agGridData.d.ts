@@ -1,0 +1,1 @@
+export declare const agGridLicenseKey = "CompanyName=TriNet USA, INC,LicensedApplication=Workforce Analytics,LicenseType=SingleApplication,LicensedConcurrentDeveloperCount=16,LicensedProductionInstancesCount=4,AssetReference=AG-033778,SupportServicesEnd=1_December_2023_[v2]_MTcwMTM4ODgwMDAwMA==e662f814ed0f5e6a6b302b68b1141ca4";
