@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "retool": {
+    "app": {
+      "uuid": "79f80050-70b1-11f1-9c06-7f83a7bbaac9",
+      "name": "Termination Workflow App",
+      "resourceReferencesByFile": {},
+      "appIdentifier": "terminations-wf-app"
+    }
+  }
+}
