@@ -12,6 +12,7 @@ import { RadioGroup, RadioGroupItem } from "../lib/shadcn/radio-group";
 import { Alert, AlertDescription } from "../lib/shadcn/alert";
 import { Separator } from "../lib/shadcn/separator";
 import { useWizard } from "../hooks/useWizardState";
+import TNetPageHeader from "../components/tnet/TNetPageHeader";
 import { TERM_REASONS } from "../utils/types";
 import type { TermType } from "../utils/types";
 
@@ -50,14 +51,10 @@ export default function TerminationInfo() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h2 className="text-xl font-semibold text-foreground">
-          Termination Information
-        </h2>
-        <p className="text-sm text-muted-foreground mt-1">
-          Select the termination type, reason, and key dates.
-        </p>
-      </div>
+      <TNetPageHeader
+        title="Termination Information"
+        description="Select the termination type, reason, and key dates."
+      />
 
       {/* VNS Alert */}
       {isVNS && (

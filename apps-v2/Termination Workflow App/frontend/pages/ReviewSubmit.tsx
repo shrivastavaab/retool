@@ -19,6 +19,7 @@ import { Badge } from "../lib/shadcn/badge";
 import { Separator } from "../lib/shadcn/separator";
 import { Alert, AlertDescription, AlertTitle } from "../lib/shadcn/alert";
 import { useWizard } from "../hooks/useWizardState";
+import TNetPageHeader from "../components/tnet/TNetPageHeader";
 import { TERM_REASONS } from "../utils/types";
 
 function SectionCard({
@@ -131,14 +132,10 @@ export default function ReviewSubmit() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h2 className="text-xl font-semibold text-foreground">
-          Review & Submit
-        </h2>
-        <p className="text-sm text-muted-foreground mt-1">
-          Review all termination details before submitting.
-        </p>
-      </div>
+      <TNetPageHeader
+        title="Review & Submit"
+        description="Review all termination details before submitting."
+      />
 
       {missingFields.length > 0 && (
         <Alert className="border-destructive/30 bg-destructive/5">

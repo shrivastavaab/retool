@@ -3,6 +3,7 @@ import { Search, Users, ArrowRight, Clock } from "lucide-react";
 import { Input } from "../lib/shadcn/input";
 import { Button } from "../lib/shadcn/button";
 import { Badge } from "../lib/shadcn/badge";
+import { Status } from "../vendor/tnet_ds/status";
 import {
   Select,
   SelectContent,
@@ -19,6 +20,7 @@ import {
   TableRow,
 } from "../lib/shadcn/table";
 import { useWizard } from "../hooks/useWizardState";
+import TNetPageHeader from "../components/tnet/TNetPageHeader";
 import { mockEmployee } from "../utils/mockData";
 import type { SimpleEmployee } from "../utils/types";
 
@@ -56,6 +58,9 @@ export default function EmployeeSearch() {
     goNext();
   };
 
+  const getPendingStatusVariant = (status: string) =>
+    status === "In Progress" ? "inProgress" : "pending";
+
   const handleSelectPending = (empId: string) => {
     const emp = searchableEmployees.find((e) => e.empId === empId);
     if (emp) {
@@ -66,15 +71,10 @@ export default function EmployeeSearch() {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
-      <div>
-        <h2 className="text-xl font-semibold text-foreground">
-          Employee Search
-        </h2>
-        <p className="text-sm text-muted-foreground mt-1">
-          Search for an employee by ID or name, or select from pending terminations below.
-        </p>
-      </div>
+      <TNetPageHeader
+        title="Employee Search"
+        description="Search for an employee by ID or name, or select from pending terminations below."
+      />
 
       {/* Company Selector */}
       <div className="flex items-end gap-4">
@@ -208,12 +208,9 @@ export default function EmployeeSearch() {
                   <Badge variant="outline" className="text-xs">{pt.termType}</Badge>
                 </TableCell>
                 <TableCell>
-                  <Badge
-                    variant={pt.status === "In Progress" ? "warning" : "secondary"}
-                    className="text-xs"
-                  >
+                  <Status variant={getPendingStatusVariant(pt.status)} size="small">
                     {pt.status}
-                  </Badge>
+                  </Status>
                 </TableCell>
                 <TableCell>
                   <Button

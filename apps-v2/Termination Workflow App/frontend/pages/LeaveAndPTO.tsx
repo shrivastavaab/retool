@@ -14,6 +14,7 @@ import {
   TableRow,
 } from "../lib/shadcn/table";
 import { useWizard } from "../hooks/useWizardState";
+import TNetPageHeader from "../components/tnet/TNetPageHeader";
 import type { LeavePlan } from "../utils/types";
 
 export default function LeaveAndPTO() {
@@ -37,14 +38,10 @@ export default function LeaveAndPTO() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h2 className="text-xl font-semibold text-foreground">
-          Leave & PTO
-        </h2>
-        <p className="text-sm text-muted-foreground mt-1">
-          Review leave plan balances and configure payout options.
-        </p>
-      </div>
+      <TNetPageHeader
+        title="Leave & PTO"
+        description="Review leave plan balances and configure payout options."
+      />
 
       {/* State law notice */}
       {stateLaw && (
