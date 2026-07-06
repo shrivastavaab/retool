@@ -48,9 +48,9 @@ export default function LeaveAndPTO() {
 
       {/* State law notice */}
       {stateLaw && (
-        <Alert className="border-blue-200 bg-blue-50 dark:bg-blue-950/20 dark:border-blue-800">
-          <Info className="h-4 w-4 text-blue-600 dark:text-blue-400" />
-          <AlertDescription className="text-blue-700 dark:text-blue-400">
+        <Alert className="border-accent bg-accent/60">
+          <Info className="h-4 w-4 text-primary" />
+          <AlertDescription className="text-muted-foreground">
             <strong>{stateLaw.stateProvincDesc} Law:</strong>{" "}
             {stateLaw.leavePayDesc}
           </AlertDescription>
@@ -67,11 +67,11 @@ export default function LeaveAndPTO() {
             {formData.leavePlans.length}
           </p>
         </div>
-        <div className="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-800 rounded-lg p-4 shadow-retool-sm">
-          <p className="text-xs font-semibold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">
+        <div className="bg-success/10 border border-success/30 rounded-lg p-4 shadow-retool-sm">
+          <p className="text-xs font-semibold text-success uppercase tracking-wider">
             Payable Hours
           </p>
-          <p className="text-2xl font-bold text-emerald-700 dark:text-emerald-300 mt-1">
+          <p className="text-2xl font-bold text-success mt-1">
             {totalPayableHours.toFixed(1)}
           </p>
         </div>
