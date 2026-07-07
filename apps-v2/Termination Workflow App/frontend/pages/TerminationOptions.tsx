@@ -2,6 +2,7 @@ import { Info } from "lucide-react";
 import { RadioGroup, RadioGroupItem } from "../lib/shadcn/radio-group";
 import { Alert, AlertDescription } from "../lib/shadcn/alert";
 import { useWizard } from "../hooks/useWizardState";
+import TNetPageHeader from "../components/tnet/TNetPageHeader";
 import type { TermProcessingType } from "../utils/types";
 
 const TERM_OPTIONS: {
@@ -55,14 +56,10 @@ export default function TerminationOptions() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h2 className="text-xl font-semibold text-foreground">
-          Termination Options
-        </h2>
-        <p className="text-sm text-muted-foreground mt-1">
-          What type of termination would you like to process?
-        </p>
-      </div>
+      <TNetPageHeader
+        title="Termination Options"
+        description="What type of termination would you like to process?"
+      />
 
       <Alert className="border-accent bg-accent/60">
         <Info className="h-4 w-4 text-primary" />

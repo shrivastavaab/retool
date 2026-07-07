@@ -12,6 +12,7 @@ import {
 import { RadioGroup, RadioGroupItem } from "../lib/shadcn/radio-group";
 import { Alert, AlertDescription } from "../lib/shadcn/alert";
 import { useWizard } from "../hooks/useWizardState";
+import TNetPageHeader from "../components/tnet/TNetPageHeader";
 
 export default function DeliveryInstructions() {
   const { formData, updateFormData, stateLaw } = useWizard();
@@ -38,14 +39,10 @@ export default function DeliveryInstructions() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h2 className="text-xl font-semibold text-foreground">
-          Delivery Instructions
-        </h2>
-        <p className="text-sm text-muted-foreground mt-1">
-          Configure payment method, delivery, and direct deposit options.
-        </p>
-      </div>
+      <TNetPageHeader
+        title="Delivery Instructions"
+        description="Configure payment method, delivery, and direct deposit options."
+      />
 
       {/* Payment method warning */}
       {showInvoluntaryPaymentWarning && (

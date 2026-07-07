@@ -12,6 +12,7 @@ import { Badge } from "../lib/shadcn/badge";
 import { Alert, AlertDescription, AlertTitle } from "../lib/shadcn/alert";
 import { Separator } from "../lib/shadcn/separator";
 import { useWizard } from "../hooks/useWizardState";
+import TNetPageHeader from "../components/tnet/TNetPageHeader";
 
 function InfoRow({ label, value }: { label: string; value: string | null }) {
   return (
@@ -33,14 +34,10 @@ export default function EmployeeDetails() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h2 className="text-xl font-semibold text-foreground">
-          Employee Details
-        </h2>
-        <p className="text-sm text-muted-foreground mt-1">
-          Review employee information and eligibility before proceeding.
-        </p>
-      </div>
+      <TNetPageHeader
+        title="Employee Details"
+        description="Review employee information and eligibility before proceeding."
+      />
 
       {/* Eligibility Alerts */}
       <div className="space-y-3">

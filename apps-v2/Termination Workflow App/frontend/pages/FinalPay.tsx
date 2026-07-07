@@ -21,6 +21,7 @@ import {
 } from "../lib/shadcn/table";
 import { Separator } from "../lib/shadcn/separator";
 import { useWizard } from "../hooks/useWizardState";
+import TNetPageHeader from "../components/tnet/TNetPageHeader";
 import type { EarningsEntry } from "../utils/types";
 
 export default function FinalPay() {
@@ -88,12 +89,10 @@ export default function FinalPay() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h2 className="text-xl font-semibold text-foreground">Final Pay</h2>
-        <p className="text-sm text-muted-foreground mt-1">
-          Configure earnings for the final paycheck.
-        </p>
-      </div>
+      <TNetPageHeader
+        title="Final Pay"
+        description="Configure earnings for the final paycheck."
+      />
 
       {/* Earnings Table */}
       <div className="bg-card border border-border rounded-lg shadow-retool-sm overflow-hidden">
